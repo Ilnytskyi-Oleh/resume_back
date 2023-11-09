@@ -25,12 +25,12 @@ class Employee extends Model
         'sex',
     ];
 
-    protected function sex(): Attribute
-    {
-        return Attribute::make(
-            get: fn (string $value) => $value ? 'm' : 'f',
-        );
-    }
+//    protected function getSex(): Attribute
+//    {
+//        return Attribute::make(
+//            get: fn (string $value) => $value ? 'm' : 'f',
+//        );
+//    }
 
 
 }
