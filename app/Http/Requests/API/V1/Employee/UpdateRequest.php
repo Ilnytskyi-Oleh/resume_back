@@ -27,7 +27,7 @@ class UpdateRequest extends FormRequest
             'age' => 'nullable|numeric|min:18|max:150',
             'experience' => ['numeric', 'nullable', 'min:0', new ExperienceLessThanAge()],
             'salary' => 'nullable|numeric|min:1',
-            'sex' => 'nullable|boolean',
+            'sex' => 'nullable|string|in:f,m',
         ];
     }
 }

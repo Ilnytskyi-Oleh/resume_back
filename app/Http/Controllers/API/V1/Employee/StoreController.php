@@ -22,6 +22,5 @@ class StoreController extends Controller
         $employee = Employee::create($data);
 
         return new EmployeeResource($employee);
-
     }
 }

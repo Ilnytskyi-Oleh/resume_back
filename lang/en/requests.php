@@ -2,9 +2,9 @@
 
 return [
     'name' => [
-        'required' => "Name is required",
-        'max' => "Maximum characters allowed for the name is 100",
-        'min' => "Minimum characters required for the name is 2",
+        'required' => "The name is required",
+        'max' => "Maximum character limit for name is 100",
+        'min' => "Minimum character limit for name is 2",
         'is_obscene' => "Calm down!",
     ],
 
@@ -14,8 +14,8 @@ return [
         'max' => "Age must be less than 150",
     ],
     'salary' => [
-        'required' => "Salary is mandatory",
-        'min' => "Salary must be a minimum of 1",
+        'required' => "Salary is required",
+        'min' => "Salary must be at least 1",
     ],
     'experience' => [
         'min' => 'Experience must be greater than or equal to 0'
@@ -23,6 +23,9 @@ return [
     'sex' => [
         'required' => 'Gender must be specified',
         'boolean' => 'Gender must be a boolean value',
+    ],
+    'perPage' => [
+        'numeric' => 'Value must be numeric',
+        'gt' => 'Value must be greater than 0',
     ]
 ];
-

@@ -15,6 +15,21 @@ class IndexRequest extends FormRequest
     }
 
     /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array<string, string>
+     */
+    public function messages(): array
+    {
+        return [
+            'perPage.gt' => __('requests.perPage.gt'),
+            'perPage.numeric' => __('requests.perPage.numeric'),
+            'page.gt' => __('requests.perPage.gt'),
+            'page.numeric' => __('requests.perPage.numeric'),
+        ];
+    }
+
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>

@@ -34,7 +34,6 @@ class StoreRequest extends FormRequest
             'salary.min' => __('requests.salary.min'),
             'experience.min' => __('requests.experience.min'),
             'sex.required' => __('requests.sex.required'),
-            'sex.boolean' => __('requests.sex.boolean'),
         ];
     }
 
@@ -50,7 +49,7 @@ class StoreRequest extends FormRequest
             'age' => 'required|numeric|min:18|max:150',
             'experience' => ['numeric', 'nullable', 'min:0', new ExperienceLessThanAge],
             'salary' => 'required|numeric|min:1',
-            'sex' => 'required|boolean',
+            'sex' => 'required|string|in:f,m',
         ];
     }
 }

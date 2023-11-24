@@ -13,6 +13,12 @@ class DeleteController extends Controller
     {
         $employee->delete();
 
+        $employeeCount = Employee::count();
+
+        if ($employeeCount <= 10) {
+            \Artisan::call('migrate:fresh --seed');
+        }
+
         return response()->json();
     }
 }
