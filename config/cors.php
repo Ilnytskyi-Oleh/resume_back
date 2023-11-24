@@ -21,8 +21,6 @@ return [
 
     'allowed_origins' => ['*'],
 
-//    'allowed_origins' => ['https://resume-beta-five.vercel.app/', 'http://localhost:*'],
-
     'allowed_origins_patterns' => [],
 
     'allowed_headers' => ['*'],
